@@ -18,10 +18,10 @@ const char* find_shortest(const char * const * strings, int len)
     // length is the current string length
     length = 0;
     
-    // If the current string is not Null, calculate the length of string[i]
+    // If the current string is not Null, calculate the length of string[row]
     if (strings[row] != NULL)
     {
-        while(strings[i][length] != '\0')
+        while(strings[row][length] != '\0')
           length++;
     }
     else
@@ -31,14 +31,14 @@ const char* find_shortest(const char * const * strings, int len)
     if (shortest == -1)
     {
       shortest = length;
-      shortStr = strings[i];
+      shortStr = strings[row];
     }
    
-    // check whether string[i] is shorter than the current shortest string
+    // check whether string[row] is shorter than the current shortest string
     // if yes, update shortest and the pointer shortStr
     if(length < shortest){
       shortest = length;
-      shortStr = strings[i];
+      shortStr = strings[row];
     }
   }
   return(shortStr);

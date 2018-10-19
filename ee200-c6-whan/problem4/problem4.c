@@ -7,7 +7,7 @@ const char* find_shortest(const char * const * strings, int len)
 {
   // if strings is NULL, exit without crash
   if (strings == NULL)
-    exit(1);
+    return(NULL);
   
   int i;
   int length = 0;
